@@ -1,0 +1,89 @@
+<!--
+LEVI COLQUITT
+Assignment 3+4 STQA
+3/15/2020
+This HTML file adds some structure for the retirement page
+This is where the forms grab the input from the user and send it to the forms.py
+--!>
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method ="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4"> Enter desired details below:</legend>
+                    <div class="form-group" {{ form.age.label(class="form-control-label") }}
+                        {% if form.age.errors %}
+
+                            {{ form.age(class="form-control form-control-lg is-invalid") }}
+
+                            {% for error in form.age.errors %}
+
+                                <div class="alert alert-{{ category }}">
+                                    <span>{{ error }}</span>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            {{ form.age(class="form-control form-control-lg") }}
+                        {% endif %}
+                    <div class="form-group" {{ form.salary.label(class="form-control-label") }}
+                        {% if form.salary.errors %}
+
+                            {{ form.salary(class="form-control form-control-lg is-invalid") }}
+
+                            {% for error in form.salary.errors %}
+
+                                <div class="alert alert-{{ category }}">
+                                    <span>{{ error }}</span>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            {{ form.salary(class="form-control form-control-lg") }}
+                        {% endif %}
+                    <div class="form-group" {{ form.percentSaved.label(class="form-control-label") }}
+                        {% if form.percentSaved.errors %}
+
+                            {{ form.percentSaved(class="form-control form-control-lg is-invalid") }}
+
+                            {% for error in form.percentSaved.errors %}
+
+                                <div class="alert alert-{{ category }}">
+                                    <span>{{ error }}</span>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            {{ form.percentSaved(class="form-control form-control-lg") }}
+                        {% endif %}
+                    <div class="form-group" {{ form.desiredSavingsGoal.label(class="form-control-label") }}
+                        {% if form.desiredSavingsGoal.errors %}
+
+                            {{ form.desiredSavingsGoal(class="form-control form-control-lg is-invalid") }}
+
+                            {% for error in form.desiredSavingsGoal.errors %}
+
+                                <div class="alert alert-{{ category }}">
+                                    <span>{{ error }}</span>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            {{ form.desiredSavingsGoal(class="form-control form-control-lg") }}
+                        {% endif %}
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}

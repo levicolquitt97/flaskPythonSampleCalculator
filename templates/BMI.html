@@ -1,0 +1,77 @@
+<!--
+LEVI COLQUITT
+Assignment 3+4 STQA
+3/15/2020
+This HTML file adds some structure for the BMI page
+This is where the forms grab the input from the user and send it to the forms.py
+--!>
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method ="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4"> Enter desired details below:</legend>
+                    <div class="form-group" {{ form.heightFeet.label(class="form-control-label") }}
+                        {% if form.heightFeet.errors %}
+
+                            {{ form.heightFeet(class="form-control form-control-lg is-invalid") }}
+
+                            {% for error in form.heightFeet.errors %}
+
+                                <div class="alert alert-{{ category }}">
+                                    <span>{{ error }}</span>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            {{ form.heightFeet(class="form-control form-control-lg") }}
+                        {% endif %}
+
+                    <div class="form-group" {{ form.heightInches.label(class="form-control-label") }}
+                        {% if form.heightInches.errors %}
+
+                            {{ form.heightInches(class="form-control form-control-lg is-invalid") }}
+
+                            {% for error in form.heightInches.errors %}
+
+                                <div class="alert alert-{{ category }}">
+                                    <span>{{ error }}</span>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            {{ form.heightInches(class="form-control form-control-lg") }}
+                        {% endif %}
+                    <!--</div>--!>
+
+
+                </div>
+                    <div class="form-group" {{ form.weight.label(class="form-control-label") }}
+                        {% if form.weight.errors %}
+
+                            {{ form.weight(class="form-control form-control-lg is-invalid") }}
+
+                            {% for error in form.weight.errors %}
+
+                                <div class="alert alert-{{ category }}">
+                                    <span>{{ error }}</span>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            {{ form.weight(class="form-control form-control-lg") }}
+                        {% endif %}
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}
