@@ -20,6 +20,20 @@ This HTML file adds some structure for the aboutPage
                 THE BMI calculator will calculate BMI based on given parameters. With the following formula:
             </p>
         </h2>
+        <p class="text-muted">
+            height_squared = float(metric_height * metric_height)
+            BMIvalue = (metric_weight/height_squared)
+            if BMIvalue <= 18.5:
+                weight_category = ' weight category: Underweight'
+            if BMIvalue > 18.5 and BMIvalue <= 24.9:
+                weight_category = ' weight category: Normal weight'
+            if BMIvalue >= 25 and BMIvalue <= 29.9:
+                weight_category = ' weight category: Overweight'
+            if BMIvalue > 29.9:
+                weight_category = ' weight category: Obese'
+            returns: BMIvalue, weight category
+
+        </p>
         <h3>
             Retirement calculator
             <p>
