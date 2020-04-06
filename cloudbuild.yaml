@@ -1,23 +1,9 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--tag=gcloud-slim', '--tag=gcr.io/stqa-assignment-3-4/gcloud-slim', '-f', 'Dockerfile.slim', '.']
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--tag=gcr.io/stqa-assignment-3-4/gcloud', '-f', 'Dockerfile', '.']
-
-# Simple sanity check: invoke the new gcloud container to confirm that it was
-# built correctly.
-- name: 'gcr.io/stqa-assignment-3-4/gcloud'
-  args: ['info']
-- name: 'gcr.io/stqa-assignment-3-4/gcloud-slim'
-  args: ['info']
-
-# Invoke a command that requires auth, to check that it gets piped through
-# correctly.
-- name: 'gcr.io/stqa-assignment-3-4/gcloud'
-  args: ['source', 'repos', 'clone', 'default']
-
-images:
-- 'gcr.io/stqa-assignment-3-4/gcloud'
-- 'gcr.io/stqa-assignment-3-4/gcloud-slim'
-
-timeout: 1200s
+- name: python:3.7
+  id: INSTALL
+  args:
+    - '-m'
+    - 'pip'
+    - 'install'
+    - '-r'
+    - 'requirements.txt'
