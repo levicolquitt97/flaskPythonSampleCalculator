@@ -62,18 +62,19 @@ def retirement():
         desiredSavingsGoal = int(request.form['desiredSavingsGoal'])
         rCalc = retirementCalc(age, salary, percentSaved, desiredSavingsGoal, savingsPrinter)
         # formatting returned values from Calc function
-        if rCalc == 0:
+        if rCalc is None:
             flash(f'Tried to calculate but the goal cannot be met during avg life expectancy (100 y.o.)... Therefore: {rCalc}!', 'danger')
+        else:
 
-        calcPrinter = str(rCalc)
-        calc2 = calcPrinter.replace('(', ' ')
-        calc3 = calc2.replace(')', ' ')
-        calc4 = calc3.replace("'", "")
-        calc5 = calc4.replace(",", "")
-        rCalc = calc4
-        #success message with calculated information
-        flash(f'Calculated: {rCalc}!', 'success')
-        return redirect(url_for('retirement'))
+            calcPrinter = str(rCalc)
+            calc2 = calcPrinter.replace('(', ' ')
+            calc3 = calc2.replace(')', ' ')
+            calc4 = calc3.replace("'", "")
+            calc5 = calc4.replace(",", "")
+            rCalc = calc4
+            #success message with calculated information
+            flash(f'Calculated: {rCalc}!', 'success')
+            return redirect(url_for('retirement'))
     return render_template('retirement.html', title='retirement', form=form)
 
 

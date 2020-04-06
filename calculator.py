@@ -43,8 +43,7 @@ def retirementCalc(age, salary, percentSaved, desiredSavingsGoal, savingsPrinter
     savings = int(0)
     employer_match = .35
     while i <= (100-age):
-        if i == (100-age):
-            savingsPrinter = ("We are sorry but your savings goal was not met with in life expectancy (100 years). \n You managed to save: "+savings+" by age 100")
+
         savings = float((salary * (percentSaved/100)) + savings)
         bonus = ((salary*(percentSaved/100)) *.35)
         savings = savings + bonus
