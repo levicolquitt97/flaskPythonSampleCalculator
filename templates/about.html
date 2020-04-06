@@ -30,7 +30,7 @@ This HTML file adds some structure for the aboutPage
             if BMIvalue >= 25 and BMIvalue <= 29.9:
                 weight_category = ' weight category: Overweight'
             if BMIvalue > 29.9:
-                weight_category = ' weight category: Obese'
+                weight_category = ' weight categor: Obese'
             returns: BMIvalue, weight category
 
         </p>
@@ -38,7 +38,21 @@ This HTML file adds some structure for the aboutPage
             Retirement calculator
             <p>
                 THE RETIREMENT calculator will calculate if you will attain given retirement savings goal based on the following formula:
-                DICKS
+
+            </p>
+            <p class="text-muted">
+                    while i <= (100-age):
+        if i == (100-age):
+            print("We are sorry but your savings goal was not met with in life expectancy (100 years).\n You managed to save:", savings, "by age 100")
+        savings = float((salary * (percentSaved/100)) + savings)
+        bonus = ((salary*(percentSaved/100)) *.35)
+        savings = savings + bonus
+        age += 1
+        if savings >= desiredSavingsGoal:
+            savings = str(savings)
+            age = str(age)
+            desiredSavingsGoal = str(desiredSavingsGoal)
+            savingsPrinter = ("You will have saved: $"+savings+" By age: "+age+" Which meets your savings goal of: $"+desiredSavingsGoal)
             </p>
         </h3>
 
