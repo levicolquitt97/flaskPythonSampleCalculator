@@ -62,6 +62,9 @@ def retirement():
         desiredSavingsGoal = int(request.form['desiredSavingsGoal'])
         rCalc = retirementCalc(age, salary, percentSaved, desiredSavingsGoal, savingsPrinter)
         # formatting returned values from Calc function
+        if rCalc == 0:
+            flash(f'Tried to calculate but the goal cannot be met during avg life expectancy (100 y.o.)... Therefore: {rCalc}!', 'danger')
+
         calcPrinter = str(rCalc)
         calc2 = calcPrinter.replace('(', ' ')
         calc3 = calc2.replace(')', ' ')
