@@ -56,9 +56,6 @@ steps:
   id: RUN-END-END-TESTS
   args:
   - '-m'
-  - '-py'
-  - '-3'
-  - '-m'
   - 'E2ETesting.py'
   waitFor:
   - INSTALL
