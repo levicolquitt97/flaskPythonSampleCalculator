@@ -5,6 +5,7 @@
 import unittest
 import calculator
 
+
 class TestCalc(unittest.TestCase):
     # The following test will just test the accuracy of the BMI function
     # Since the Flask forms are how we keep out undesireable values these
