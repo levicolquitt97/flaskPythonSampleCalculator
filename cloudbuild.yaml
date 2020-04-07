@@ -17,8 +17,8 @@ steps:
   - '-m'
   - 'nose2'
   - '-s'
-  - 'functions'
+  - 'tests'
   - '-c'
-  - 'functions/nose2.cfg'
+  - 'tests/nose2.cfg'
   waitFor:
   - INSTALL
