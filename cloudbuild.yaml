@@ -24,6 +24,14 @@ steps:
   - INSTALL
 - name: python:3.7
   entrypoint: python3
+  id: SETUP_COVERALLS
+  args:
+    - '-m'
+    - 'coveralls'
+  env:
+    - 'COVERALLS_REPO_TOKEN=246ghLDF9EVfsesHhuMr1rxz8wseGyPHp'
+- name: python:3.7
+  entrypoint: python3
   id: RUN-COVERAGE-TESTS
   args:
   - '-m'
@@ -33,7 +41,5 @@ steps:
   - '-m'
   - 'nose2'
   - 'tests'
-  env:
-    - 'COVERALLS_REPO_TOKEN=246ghLDF9EVfsesHhuMr1rxz8wseGyPHp'
   waitFor:
   - INSTALL
