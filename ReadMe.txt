@@ -13,6 +13,8 @@ PROJECT LINKS:
 Github: https://github.com/levicolquitt97/flaskPythonSampleCalculator
 Google Drive folder: https://drive.google.com/open?id=1dpb6MiZdqpWC9N78FHfrAGSceHsXThLm
 WEB URL: https://stqa-assignment-3-4.appspot.com/
+Original project 2 repo:
+https://github.com/levicolquitt97/STQA-assignment-2
 
 Citations:
 Flask Documentation: https://flask.palletsprojects.com/en/1.1.x/
