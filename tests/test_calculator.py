@@ -1,17 +1,17 @@
-#LEVI COLQUITT
-#Assignment 2 STQA
-#3/15/2020
+# LEVI COLQUITT
+# Assignment 2 STQA
+# 3/15/2020
 # Unit tester for calculator file
 import unittest
 import calculator
 
 class TestCalc(unittest.TestCase):
-    #The following test will just test the accuracy of the BMI function
-    #Since the Flask forms are how we keep out undesireable values these
-    #tests wont tell us if the range is correct rather if the formulas are correct
+    # The following test will just test the accuracy of the BMI function
+    # Since the Flask forms are how we keep out undesireable values these
+    # tests wont tell us if the range is correct rather if the formulas are correct
 
-    #These tests are not 'on' or 'off a boundary because the boundary is not implemented
-    #In the calculator.py however using these as our initial tests will allow their resuse later
+    # These tests are not 'on' or 'off a boundary because the boundary is not implemented
+    # In the calculator.py however using these as our initial tests will allow their resuse later
     def test_BMICalcOffLower(self):
         result = calculator.BMICalc(0, -1, -1, 1, ' ')
         self.assertEqual(result, (-719.9999999999999, ' weight category: Underweight'))
@@ -36,12 +36,12 @@ class TestCalc(unittest.TestCase):
         result = calculator.BMICalc(4, 10, 400, 1, ' ')
         self.assertEqual(result, (85.61236623067775, ' weight category: Obese'))
 
-    #The following test will just test the accuracy of the retirement function
-    #Since the Flask forms are how we keep out undesireable values these
-    #tests wont tell us if the range is correct rather if the formulas are correct
+    # The following test will just test the accuracy of the retirement function
+    # Since the Flask forms are how we keep out undesireable values these
+    # tests wont tell us if the range is correct rather if the formulas are correct
 
-    #These tests are not 'on' or 'off a boundary because the boundary is not implemented
-    #In the calculator.py however using these as our initial tests will allow their resuse later
+    # These tests are not 'on' or 'off a boundary because the boundary is not implemented
+    # In the calculator.py however using these as our initial tests will allow their resuse later
     def test_retirementCalcOffLower(self):
         result = calculator.retirementCalc(-1, -1, -1, -1, ' ')
         self.assertEqual(result, ("You will have saved: $0.0135 By age: 0 Which meets your savings goal of: $-1"))
