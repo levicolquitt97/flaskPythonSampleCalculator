@@ -18,7 +18,7 @@ class BMIForm(FlaskForm):
 
 #Form that takes input for retirement page and also validates the input
 class retirementForm(FlaskForm):
-    age = IntegerField('current age:', validators=[InputRequired(), NumberRange(min=0, max=99)])
+    age = IntegerField('Current age:', validators=[InputRequired(), NumberRange(min=0, max=99)])
     salary = IntegerField('Annual salary in $:', validators=[InputRequired(), NumberRange(min=0)])
     percentSaved = IntegerField('Enter annual percent of salary saved:', validators=[InputRequired(), NumberRange(min=0, max=99)])
     desiredSavingsGoal = IntegerField('Enter your desired savings goal:', validators=[InputRequired(), NumberRange(min=0)])
