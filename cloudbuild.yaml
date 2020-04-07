@@ -14,11 +14,11 @@ steps:
   entrypoint: python3
   id: RUN-UNIT-TESTS
   args:
-    - '-m'
-    - 'nose2'
-    - '-s'
-    - 'functions'
-    - '-c'
-    - 'functions/nose2.cfg'
-    waitFor:
-    - INSTALL
+  - '-m'
+  - 'nose2'
+  - '-s'
+  - 'functions'
+  - '-c'
+  - 'functions/nose2.cfg'
+  waitFor:
+  - INSTALL
