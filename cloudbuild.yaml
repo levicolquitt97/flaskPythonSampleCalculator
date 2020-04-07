@@ -27,7 +27,7 @@ steps:
   id: SETUP_COVERALLS
   args:
     - '-m'
-    - 'set'
+    - '--set'
     - 'COVERALLS_REPO_TOKEN=246ghLDF9EVfsesHhuMr1rxz8wseGyPHp'
     - 'coveralls'
 - name: python:3.7
