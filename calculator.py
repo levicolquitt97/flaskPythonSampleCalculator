@@ -4,6 +4,8 @@
 #3/15/2020
 #The following code will calculate the BMI or retirement savings as dictated by the user
 
+#Test comment for addition
+
 #BEGIN
 
 #BMI class that will calculate our BMI given input in feet, inches, and pounds
