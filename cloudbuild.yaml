@@ -16,3 +16,9 @@ steps:
   args:
     - '-m'
     - 'nose2'
+    - '-s'
+    - 'functions'
+    - '-c'
+    - 'functions/nose2.cfg'
+    waitFor:
+    - INSTALL
