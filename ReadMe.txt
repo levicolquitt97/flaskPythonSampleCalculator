@@ -24,3 +24,6 @@ Github: https://github.com/CoreyMSchafer/code_snippets/tree/master/Python/Flask_
 
 Project Scope
 This project is meant to be a sample project that would help the developer learn the following: Google Cloud platform, Python for web (Flask), WtForms, and automated testing/deployment. This is not a professional web app and is only intended to show the common practices/methodologies used in implementing the aforementioned concepts.
+
+
+test commit
